@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SuperScrollview" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="BGb-sF-XNg" id="P3C-57-1fL"/>
+                <outlet property="textView" destination="Ge2-Ks-Eds" id="gBx-hl-aeh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXt-jd-tSr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMa-Cf-aEC">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-Ks-Eds">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-sF-XNg">
+                                    <rect key="frame" x="0.0" y="33" width="375" height="634"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="634" id="qYg-10-gl6"/>
+                                    </constraints>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Ge2-Ks-Eds" firstAttribute="leading" secondItem="VMa-Cf-aEC" secondAttribute="leading" id="1eq-Iz-DUj"/>
+                                <constraint firstAttribute="bottom" secondItem="BGb-sF-XNg" secondAttribute="bottom" id="1hT-bL-Czn"/>
+                                <constraint firstAttribute="trailing" secondItem="BGb-sF-XNg" secondAttribute="trailing" id="Npe-6u-AkD"/>
+                                <constraint firstItem="Ge2-Ks-Eds" firstAttribute="top" secondItem="VMa-Cf-aEC" secondAttribute="top" id="Usk-WX-j66"/>
+                                <constraint firstAttribute="trailing" secondItem="Ge2-Ks-Eds" secondAttribute="trailing" id="WJV-gd-OuL"/>
+                                <constraint firstItem="BGb-sF-XNg" firstAttribute="leading" secondItem="VMa-Cf-aEC" secondAttribute="leading" id="Wac-cV-FaZ"/>
+                                <constraint firstItem="BGb-sF-XNg" firstAttribute="top" secondItem="Ge2-Ks-Eds" secondAttribute="bottom" id="ZRg-Yi-0Mp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="VMa-Cf-aEC" firstAttribute="width" secondItem="UXt-jd-tSr" secondAttribute="width" id="6ux-6M-OgH"/>
+                        <constraint firstAttribute="bottom" secondItem="VMa-Cf-aEC" secondAttribute="bottom" id="8PH-O4-Hu1"/>
+                        <constraint firstItem="VMa-Cf-aEC" firstAttribute="top" secondItem="UXt-jd-tSr" secondAttribute="top" id="dmb-aR-Bun"/>
+                        <constraint firstAttribute="trailing" secondItem="VMa-Cf-aEC" secondAttribute="trailing" id="hSP-Rc-Pr2"/>
+                        <constraint firstItem="VMa-Cf-aEC" firstAttribute="leading" secondItem="UXt-jd-tSr" secondAttribute="leading" id="w7P-ZD-0wN"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UXt-jd-tSr" secondAttribute="bottom" id="PiI-iM-U5C"/>
+                <constraint firstItem="UXt-jd-tSr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uov-1G-rba"/>
+                <constraint firstItem="UXt-jd-tSr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ahs-QA-Mav"/>
+                <constraint firstAttribute="trailing" secondItem="UXt-jd-tSr" secondAttribute="trailing" id="kv1-Qb-lfQ"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
